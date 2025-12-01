@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [CPRL website](https://cprl-26.github.io).
 
-If you find OVSG useful for your work please cite:
+If you find CPRL useful for your work please cite:
 ```
 @inproceedings{chang2023context,
   title={Learning Continuous Non-Prehensile Manipulation for Rapid Object
