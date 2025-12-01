@@ -1,14 +1,15 @@
-# OVSG
+# CPRL
 
-This is the repository that contains source code for the [OVSG website](https://cprl-26.github.io).
+This is the repository that contains source code for the [CPRL website](https://cprl-26.github.io).
 
 If you find OVSG useful for your work please cite:
 ```
 @inproceedings{chang2023context,
-  title={Context-Aware Entity Grounding with Open-Vocabulary 3D Scene Graphs},
+  title={Learning Continuous Non-Prehensile Manipulation for Rapid Object
+ Retrieval from Dense Clutter},
   author={Chang, Haonan and Boyalakuntla, Kowndinya and Lu, Shiyang and Cai, Siwei and Jing, Eric Pu and Keskar, Shreesh and Geng, Shijie and Abbas, Adeeb and Zhou, Lifeng and Bekris, Kostas and others},
   booktitle={7th Annual Conference on Robot Learning},
-  year={2023}
+  year={2025}
 }
 ```
 
