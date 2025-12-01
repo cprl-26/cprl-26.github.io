@@ -197,7 +197,7 @@
       </div>
     </div>
         <h3 class="title is-3" style="background-position: center;margin-left: 30rem;">
-          <span class="dovsg" style="background-position: center;"> Comparative runs of our pipeline for different test cases</span> (DOVE-G)
+          <span class="dovsg" style="background-position: center;"> Comparative runs of our pipeline for different test cases</span>
         </h3>
   </div>
 </section>
@@ -265,26 +265,21 @@
 
         <!-- Interpolating. -->
         <h3 class="title is-4">Our Pipeline</h3>
-        <img src="./static/images/ovsg-pipeline.png" class="interpolation-image" alt="OVSG Pipeline">
+        <img src="./static/images/CPRL_Pipeline.png" class="interpolation-image" alt="CPRL Pipeline">
         <div class="content has-text-justified">
-          <p>
-            Our proposed pipeline operates on inputs like positional 
-            <span style="color: #EB5B67;font-weight: bolder;">P<sub>u</sub></span>, user <span style="color: #EB5B67;font-weight: bolder;">L<sub>u</sub></span>, 
-            RGBD Scan <span style="color: #EB5B67;font-weight: bolder;">I</span>. 
-          </p>
-          <p>
-            The top section demonstrates the creation of <span style="color: #EB5B67;font-weight: bolder;">G<sub>s</sub></span> , with <span style="color: #EB5B67;font-weight: bolder;">P<sub>u</sub></span> and <span style="color: #EB5B67;font-weight: bolder;">L<sub>u</sub></span> directly channeled into it, while the RGBD Scan <span style="color: #EB5B67;font-weight: bolder;">I</span>  merges with the OVIR-3D system, 
-            leading to position and Detic feature outputs for each item. 
-            The language descriptions undergo encoding processes, including a special Spatial Relationship Encoder for poses. 
-          </p>
-          <p>
-            The bottom section delves into the formation of <span style="color: #EB5B67;font-weight: bolder;">G<sub>q</sub></span>, derived from the example query 
-            <span class="dnerf" style="font-weight: bold;font-size: larger;color: #F86560;">I want to find Tom's bottle in the laboratory.</span> 
-            An LLM breaks down the query into elements which are then feature-encoded to create <span style="color: #EB5B67;font-weight: bolder;">G<sub>q</sub></span>  . 
-          </p>
-          <p>
-            The challenge is matching <span style="color: #EB5B67;font-weight: bolder;">G<sub>q</sub></span>  within <span style="color: #EB5B67;font-weight: bolder;">G<sub>s</sub></span>, using a new proposal and ranking algorithm, where the desired entity is the central node 
-            of the top-ranked candidate.
+         <p>
+            Our continuous non-prehensile manipulation pipeline (<span style="color:#E04E4E;"><b>CPRL</b></span>) integrates 
+            perception, control, and grasp prediction into a real-time framework for retrieving a target object from dense clutter. 
+            A dual-camera eye-on-hand setup provides uninterrupted 3D pose estimates 
+            (<span style="color:#E04E4E;"><b>centers + in-plane rotations</b></span>) of all objects, even during pushing. These observations feed 
+            into a PPO-based control module, where the RL policy selects one of 
+            <span style="color:#E04E4E;"><b>16 push primitives</b></span> to gradually create graspable clearance around the target. 
+            The policy operates in simulation using object bounding boxes and gripper state, optimized with a structured reward 
+            encouraging reduced clutter overlap and improved target isolation. Once the scene becomes graspable, our accelerated 
+            grasp network computes the final top-down grasp configuration 
+            <span style="color:#E04E4E;"><b>(X, Y, θ)</b></span> using GPU-batched inference for a <b>10× speedup</b>. 
+            Together, these components enable continuous pushing, real-time perception, and fast grasp execution without any 
+            stop–sense–plan delays.
           </p>
         </div>
         
